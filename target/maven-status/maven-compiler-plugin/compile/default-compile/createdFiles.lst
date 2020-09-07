@@ -1,0 +1,6 @@
+com\message\bot\channel\Main.class
+com\message\bot\channel\MessageBot.class
+com\message\bot\channel\MesThread.class
+com\message\bot\channel\GlobalVariables.class
+com\message\bot\channel\SendMes.class
+com\message\bot\channel\MessageBot$1.class
