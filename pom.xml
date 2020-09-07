@@ -18,7 +18,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>com.message.bot.Main</mainClass>
+                            <mainClass>com.message.bot.channel.Main</mainClass>
                             <name>MessageBotForChannel</name>
                         </program>
                     </programs>
