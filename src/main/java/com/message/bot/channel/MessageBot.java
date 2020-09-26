@@ -53,11 +53,11 @@ public class MessageBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "mrm";
+        return "property by mrm";
     }
 
     @Override
     public String getBotToken() {
-        return "1053123977:AAEl8nvmajSc2Of7MjWBty16xdqwqy2bMTk";
+        return "your_telegram_bot_token";
     }
 }
