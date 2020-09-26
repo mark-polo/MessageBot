@@ -23,15 +23,11 @@ public class MessageBot extends TelegramLongPollingBot {
             if(message.getText().equals(message.getText())) {
                 GlobalVariables.TEXT = message.getText();
 
-                //new MesThread("MesThread").start(); //// второй поток если 2 поста
-
                 TimerTask task = new TimerTask() {
                         public void run() {
                             System.out.println("before : SendMes.mes(message.getText())");
                             try {
-                                if(message.getText().startsWith("#first")) {
-                                    SendMes.mes(message.getText());
-                                }
+                                SendMes.mes(message.getText());
                                 System.out.println("after : SendMes.mes(message.getText())");
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -41,10 +37,10 @@ public class MessageBot extends TelegramLongPollingBot {
                     };
                 Timer timer = new Timer("Timer");
 
-                timer.schedule(task, 1000L*60*60*24); /// если у нас один пост в боте , то через сутки выводится на канал первый поток.
+                timer.schedule(task, 1000L); /// если у нас один пост в боте , то через сутки выводится на канал первый поток.
 
                 try {
-                    send.setText("Post");
+                    send.setText("Success");
                     execute(send);
                 } catch (TelegramApiException e) {
                     e.printStackTrace();
