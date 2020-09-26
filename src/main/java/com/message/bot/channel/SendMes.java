@@ -23,7 +23,7 @@ public class SendMes {
             mess = matcher.group();
         }
 
-        String apiToken = "1053123977:AAEl8nvmajSc2Of7MjWBty16xdqwqy2bMTk";
+        String apiToken = "your_telegram_bot_api";
         assert mess != null;
         URL url = new URL("https://api.telegram.org/bot"+ apiToken +"/sendMessage?chat_id=" + chatId +"&text=" + mess.trim());
         URLConnection conn = url.openConnection();
